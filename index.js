@@ -20,5 +20,4 @@ routes.forEach(router => app.use("/api/",router));
 
 
 let port = process.env.PORT;
-let host = process.env.HOST;
-app.listen(port, host, ()=> console.log(`server is ${port} runinng`))
+app.listen(port, ()=> console.log(`server is ${port} runinng`))
