@@ -118,7 +118,7 @@ let uploadImage = upload.array("images",4);
         const savedProduct = await new Products({
             ...req.body,
             images: req.files.map(file => {
-                return `${req.protocol}://${req.hostname}/${file.destination}/${file.filename}`;
+                return `https://${req.hostname}/${file.destination}/${file.filename}`;
             })
         }).save();
 
